@@ -1,0 +1,18 @@
+users = {}
+
+def register():
+    u = input("Username: ")
+    p = input("Password: ")
+    users[u] = p
+
+def login():
+    u = input("Username: ")
+    p = input("Password: ")
+    print("Success" if users.get(u) == p else "Fail")
+
+while True:
+    print("1.Register 2.Login 3.Exit")
+    c = input()
+    if c == "1": register()
+    elif c == "2": login()
+    else: break
